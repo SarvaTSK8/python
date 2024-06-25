@@ -23,4 +23,12 @@ jobs:
       continue-on-error: true
     - name: testing continous work
       run: echo Testing-Work-After-Running    
+    - name: building docker environment setup
+      uses: docker-practice/actions-setup-docker@master
+      timeout-minutes: 12
+      run: |
+        set -x
+        docker version
+        docker build -ti second-image
+        docker run --rm hello-world
 
