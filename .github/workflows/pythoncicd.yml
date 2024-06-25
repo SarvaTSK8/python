@@ -30,6 +30,6 @@ jobs:
       run: |
         set -x
         docker version
-        docker build -ti second-image
+        docker build -ti second-image .
         docker run --rm hello-world
 
