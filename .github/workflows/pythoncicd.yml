@@ -16,7 +16,7 @@ jobs:
       with:
         python-version: '3.9'
         cache: 'pip' # caching pip dependencies
-    - name: isntalling the dependcies      
+    - name: installing the dependcies      
     - run: pip install -r requirements.txt
     - name: executing the test
     - run: pytest  
