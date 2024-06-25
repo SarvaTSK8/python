@@ -26,6 +26,7 @@ jobs:
     - name: building docker environment setup
       uses: docker-practice/actions-setup-docker@master
       timeout-minutes: 12
+    - name: build docker image
       run: |
         set -x
         docker version
