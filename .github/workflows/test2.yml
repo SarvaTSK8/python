@@ -1,0 +1,23 @@
+name: build project
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  buildjob1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: buildstep1
+      uses: actions/checkout@v4
+    - name: set up java
+    - uses: actions/checkout@main
+    - run: java -version
+
+
+
+
+
+
