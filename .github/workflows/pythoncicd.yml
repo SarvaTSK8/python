@@ -8,7 +8,7 @@ on:
 
 jobs:
   buildjob1:
-    runs-on: ubuntu-self-hosted
+    runs-on: self-hosted
     steps:
     - name: buildstep1
       uses: actions/checkout@v4
