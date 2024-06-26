@@ -10,6 +10,8 @@ jobs:
   buildjob1:
     runs-on: self-hosted
     steps:
+    - name: login as root user
+      run: sudo su -
     - name: buildstep1
       uses: actions/checkout@v4
     - uses: actions/setup-python@v5
