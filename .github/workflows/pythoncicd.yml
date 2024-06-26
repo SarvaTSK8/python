@@ -6,7 +6,12 @@ on:
       - main
 jobs:
   pybuildjob1:
-    runs-on: Runner
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, runner]
+        python-version: ['3.8', '3.9', '3.10']
+
+    runs-on: ${{ matrix.os }}
     steps:
       - name: login as root user
         run: sudo su -
@@ -15,7 +20,7 @@ jobs:
       - name: pybuildsubtest    
         uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
+          python-version: ${{ matrix.pythone_version }} 
           cache: 'pip' # caching pip dependencies
       - name: installing dependencies
         run: pip install -r requirements.txt
