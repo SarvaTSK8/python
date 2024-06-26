@@ -39,4 +39,4 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: docker push
-      run: sudo docker push kamal17/first-doc-py-image 
+      run:  docker push kamal17/first-doc-py-image 
