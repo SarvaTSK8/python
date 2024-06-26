@@ -32,11 +32,11 @@ jobs:
       run: |
         set -x
         docker version
-         sudo docker build -t sarvatsk8/pythonproject .
+         sudo docker build -t sarvatsk8/pythonproject1 .
     - name: docker login
       uses: docker/login-action@v3
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: docker push
-      run:  docker push sarvatsk8/pythonproject 
+      run:  docker push sarvatsk8/pythonproject1 
