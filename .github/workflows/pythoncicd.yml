@@ -8,7 +8,7 @@ on:
 
 jobs:
   buildjob1:
-    runs-on: self-hosted
+    runs-on: Runner 
     steps:
     - name: login as root user
       run: sudo su -
